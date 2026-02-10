@@ -28,7 +28,7 @@ namespace StacksAndWeight80.Patches
                     continue;
 
                 var itemDrop = prefab.GetComponent<ItemDrop>();
-                if (itemDrop == null)
+                if (itemDrop == null || itemDrop.m_itemData == null)
                     continue;
 
                 var shared = itemDrop.m_itemData.m_shared;
