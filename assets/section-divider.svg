@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="30" viewBox="0 0 900 30">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e2b055;stop-opacity:0" />
+      <stop offset="20%" style="stop-color:#e2b055;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#f0d68a;stop-opacity:0.8" />
+      <stop offset="80%" style="stop-color:#e2b055;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#e2b055;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <!-- Main decorative line -->
+  <line x1="50" y1="15" x2="850" y2="15" stroke="url(#lineGrad)" stroke-width="1"/>
+  <!-- Center diamond -->
+  <polygon points="450,5 460,15 450,25 440,15" fill="#e2b055" opacity="0.6"/>
+  <!-- Side dots -->
+  <circle cx="350" cy="15" r="2" fill="#e2b055" opacity="0.4"/>
+  <circle cx="550" cy="15" r="2" fill="#e2b055" opacity="0.4"/>
+  <circle cx="250" cy="15" r="2" fill="#e2b055" opacity="0.3"/>
+  <circle cx="650" cy="15" r="2" fill="#e2b055" opacity="0.3"/>
+  <!-- Small rune accents -->
+  <text x="300" y="19" font-family="serif" font-size="10" fill="#5cb8ff" text-anchor="middle" opacity="0.3">ᚠ</text>
+  <text x="600" y="19" font-family="serif" font-size="10" fill="#5cb8ff" text-anchor="middle" opacity="0.3">ᚱ</text>
+</svg>
