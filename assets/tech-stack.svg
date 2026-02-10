@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="320" viewBox="0 0 700 320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e2b055" />
+      <stop offset="100%" style="stop-color:#f0d68a" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="320" fill="url(#bg)" rx="10" ry="10"/>
+  <rect x="3" y="3" width="694" height="314" fill="none" stroke="#e2b055" stroke-width="1" rx="8" ry="8" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="350" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#gold)" text-anchor="middle">⚙ Modding Tech Stack</text>
+  <line x1="200" y1="45" x2="500" y2="45" stroke="#e2b055" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Layer 1: Your Mod -->
+  <rect x="200" y="60" width="300" height="45" rx="8" fill="#2d6a4f" filter="url(#shadow)"/>
+  <rect x="200" y="60" width="300" height="45" rx="8" fill="none" stroke="#52b788" stroke-width="1.5"/>
+  <text x="350" y="78" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="bold" fill="#b7e4c7" text-anchor="middle">🛡️ Your Mod</text>
+  <text x="350" y="95" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#95d5b2" text-anchor="middle">Custom gameplay, items, creatures, recipes</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="105" x2="350" y2="120" stroke="#8899aa" stroke-width="1.5"/>
+  <polygon points="345,118 350,125 355,118" fill="#8899aa"/>
+
+  <!-- Layer 2: Jotunn -->
+  <rect x="200" y="125" width="300" height="45" rx="8" fill="#6a2c70" filter="url(#shadow)"/>
+  <rect x="200" y="125" width="300" height="45" rx="8" fill="none" stroke="#b8336a" stroke-width="1.5"/>
+  <text x="350" y="143" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="bold" fill="#e8a0bf" text-anchor="middle">📚 Jotunn (The Valheim Library)</text>
+  <text x="350" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#d4a0b9" text-anchor="middle">High-level API • Network sync • Asset management</text>
+  <text x="510" y="143" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#d4a0b9" opacity="0.7">(optional)</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="170" x2="350" y2="185" stroke="#8899aa" stroke-width="1.5"/>
+  <polygon points="345,183 350,190 355,183" fill="#8899aa"/>
+
+  <!-- Layer 3: Harmony -->
+  <rect x="200" y="190" width="300" height="45" rx="8" fill="#1b4965" filter="url(#shadow)"/>
+  <rect x="200" y="190" width="300" height="45" rx="8" fill="none" stroke="#5fa8d3" stroke-width="1.5"/>
+  <text x="350" y="208" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="bold" fill="#a0d2e8" text-anchor="middle">🔧 Harmony + BepInEx</text>
+  <text x="350" y="225" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#8ec5d6" text-anchor="middle">Runtime patching • Plugin loading • Configuration</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="235" x2="350" y2="250" stroke="#8899aa" stroke-width="1.5"/>
+  <polygon points="345,248 350,255 355,248" fill="#8899aa"/>
+
+  <!-- Layer 4: Valheim / Unity -->
+  <rect x="200" y="255" width="300" height="45" rx="8" fill="#5a3921" filter="url(#shadow)"/>
+  <rect x="200" y="255" width="300" height="45" rx="8" fill="none" stroke="#e2b055" stroke-width="1.5"/>
+  <text x="350" y="273" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="bold" fill="#f0d68a" text-anchor="middle">⚔ Valheim (Unity Engine)</text>
+  <text x="350" y="290" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#d4b483" text-anchor="middle">Game engine • .NET runtime • Game systems</text>
+
+  <!-- Side labels -->
+  <text x="170" y="87" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#8899aa" text-anchor="end" opacity="0.6">Layer 4</text>
+  <text x="170" y="152" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#8899aa" text-anchor="end" opacity="0.6">Layer 3</text>
+  <text x="170" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#8899aa" text-anchor="end" opacity="0.6">Layer 2</text>
+  <text x="170" y="282" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#8899aa" text-anchor="end" opacity="0.6">Layer 1</text>
+</svg>
