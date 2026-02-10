@@ -1,0 +1,104 @@
+# .gitignore for Valheim Modding
+
+## Unity/Valheim specific
+*.csproj.user
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Build artifacts
+*.dll
+*.exe
+!ThirdParty/**/*.dll
+!libs/**/*.dll
+
+## NuGet
+packages/
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+
+## BepInEx output (when testing locally)
+BepInEx/
+doorstop_config.ini
+winhttp.dll
+
+## Thunderstore build
+thunderstore_build/
+*.zip
+
+## Temporary files
+*.tmp
+*.temp
+*.cache
+*.log
+
+## OS specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+## Environment configuration (contains local paths)
+**/Environment.props
+!**/Environment.props.template
+
+## Documentation build artifacts
+docs/_site/
+docs/.jekyll-cache/
+
+## Package manager lock files (optional - uncomment if you want to ignore)
+# package-lock.json
+# yarn.lock
+# packages.lock.json
