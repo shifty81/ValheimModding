@@ -1,0 +1,9 @@
+{
+    "name": "StacksAndWeight80",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/shifty81/ValheimModding",
+    "description": "Cuts item weight by 80% and increases resource stack sizes to 500",
+    "dependencies": [
+        "denikson-BepInExPack_Valheim-5.4.2200"
+    ]
+}
