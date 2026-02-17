@@ -1,6 +1,6 @@
 # dllBuilder
 
-`dllBuilder.ps1` is a small Win32 (Windows Forms) helper that automates building `Stacks&Weight-80` into `StacksAndWeight80.dll`.
+`dllBuilder.ps1` is a small Windows Forms helper that automates building `Stacks&Weight-80` into `StacksAndWeight80.dll`.
 
 ## What it automates
 

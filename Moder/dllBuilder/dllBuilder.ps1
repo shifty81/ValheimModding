@@ -6,6 +6,7 @@ $repoRoot = Split-Path -Parent (Split-Path -Parent $scriptPath)
 $modProjectDir = Join-Path $repoRoot "Stacks&Weight-80"
 $modProjectFile = Join-Path $modProjectDir "StacksAndWeight80.csproj"
 $environmentFile = Join-Path $modProjectDir "Environment.props"
+$nl = [Environment]::NewLine
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "dllBuilder"
@@ -71,23 +72,31 @@ $buildButton.Add_Click({
         return
     }
 
+    $escapedPath = [System.Security.SecurityElement]::Escape($valheimPath)
     $environmentContents = @"
 <Project>
   <PropertyGroup>
-    <VALHEIM_INSTALL>$($valheimPath.Replace('&', '&amp;'))</VALHEIM_INSTALL>
+    <VALHEIM_INSTALL>$escapedPath</VALHEIM_INSTALL>
   </PropertyGroup>
 </Project>
 "@
     Set-Content -Path $environmentFile -Value $environmentContents -Encoding UTF8
 
     $configuration = $configDropdown.SelectedItem
-    $outputBox.Text = "Running dotnet build -c $configuration`r`n"
-    $outputBox.AppendText("Project: $modProjectFile`r`n`r`n")
+    $outputBox.Text = "Running dotnet build -c $configuration$nl"
+    $outputBox.AppendText("Project: $modProjectFile$nl$nl")
 
-    $buildOutput = & dotnet build $modProjectFile -c $configuration 2>&1 | Out-String
-    $outputBox.AppendText($buildOutput)
+    $buildSucceeded = $false
+    try {
+        $buildOutput = & dotnet build $modProjectFile -c $configuration 2>&1
+        $buildSucceeded = ($LASTEXITCODE -eq 0)
+        $outputBox.AppendText(($buildOutput | Out-String))
+    } catch {
+        $outputBox.AppendText("Unable to run dotnet build. Ensure .NET SDK is installed and 'dotnet' is in PATH.$nl")
+        $outputBox.AppendText($_.Exception.Message + $nl)
+    }
 
-    if ($LASTEXITCODE -eq 0) {
+    if ($buildSucceeded) {
         [System.Windows.Forms.MessageBox]::Show("Build complete. Check output above for DLL path and copy status.", "dllBuilder")
     } else {
         [System.Windows.Forms.MessageBox]::Show("Build failed. See output for details.", "dllBuilder")
