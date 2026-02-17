@@ -54,6 +54,8 @@ All mods created for this repository are located in the **[mods/](mods/)** direc
 
 See the [mods README](mods/README.md) for structure guidelines and how to build/test mods.
 
+Automation helpers (like the `dllBuilder` Win32 tool for `Stacks&Weight-80`) are in **[Moder/](Moder/)**.
+
 <img src="assets/section-divider.svg" alt="" width="900"/>
 
 ## 📚 Documentation

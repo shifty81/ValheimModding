@@ -23,6 +23,14 @@ A Valheim mod that reduces item weight by 80% and increases resource stack sizes
 2. Update `VALHEIM_INSTALL` in `Environment.props` to point to your Valheim installation
 3. Build with `dotnet build` or open in Visual Studio / Rider
 
+### Optional: Automated DLL Builder (Windows)
+
+If you want a guided Win32 interface for building, use:
+
+- `..\Moder\dllBuilder\dllBuilder.ps1`
+
+It lets you select your Valheim path, choose Debug/Release, and run `dotnet build` automatically.
+
 ## How It Works
 
 The mod uses a Harmony postfix patch on `ObjectDB.Awake` to modify all item shared data when the game's object database initializes:
